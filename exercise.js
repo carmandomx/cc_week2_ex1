@@ -15,12 +15,21 @@
 /** DO NOT CHANGE THE FUNCTION NAME **/
 const merged = (arrA, arrB) => {
     /* Only make changes below this comment */
-    
+    const ArraC = arrA.concat(arrB); // initial
+
+    // bubble sort
+    for (let i = 0; i < arrC.length; i++) {
+        for (let j = i + 1; j < arrC.length; j++) {
+            if (arrC[i] > arrC[j]) {
+                [arrC[i], arrC[j]] = [arrC[j], arrC[i]];
+            }
+        }
+    }
+
+   return arrC;
+
     /* Only make changes below this comment */
-}
 
 
-
-
-/** DO NOT CHANGE THE LINE BELOW **/
-module.exports.merged = merged;
+    /** DO NOT CHANGE THE LINE BELOW **/
+    module.exports.merged = merged;
