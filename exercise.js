@@ -15,7 +15,7 @@
 /** DO NOT CHANGE THE FUNCTION NAME **/
 const merged = (arrA, arrB) => {
     /* Only make changes below this comment */
-    let result = merged(arrA,arrB);
+    let result = [...arrA, ...arrB]
 
     function bubblesrt(arr) {
         let size = arr.length;
@@ -33,6 +33,8 @@ const merged = (arrA, arrB) => {
       }
       
       result = bubblesrt(result);
+
+      return result;
     /* Only make changes below this comment */
 }
 
