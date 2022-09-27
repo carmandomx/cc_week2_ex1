@@ -16,6 +16,23 @@
 const merged = (arrA, arrB) => {
     /* Only make changes below this comment */
     
+    const arrC = arrA.concat(arrB); // initially, array C is a merged array of the 2 inputs
+     // later, we'll modify the order of the elements of the array
+
+    // I'm going to use the bubble sort method, comparing pairs of numbers and ordering them by size
+    // we loop through the array by pairs of numbers, i and j=i+1
+    for (let i = 0; i < arrC.length; i++) {
+        for (let j = i+1; j < arrC.length; j++) {
+            // if the first element is greater than the next...
+            if (arrC[i] > arrC[j]) {
+                // the they must swap places, and so on
+                [arrC[i],arrC[j]]=[arrC[j],arrC[i]];
+            }
+        }
+    }
+
+    return arrC; // finally we return the resulting ordered array that was oiginally merged
+
     /* Only make changes below this comment */
 }
 
