@@ -22,7 +22,7 @@ const merged = (arrA, arrB) => {
          for (let j = i+1; j < arrC.length; j++) {
     // if the first element is greater than the next 
            if (arrC[i] > arrC[j]) {
-    // the they must swap places
+    // the last part is swap the elements
                [arrC[i],arrC[j]]=[arrC[j],arrC[i]];
            }
        }
