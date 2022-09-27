@@ -23,6 +23,7 @@ const merged = (arrA, arrB) => {
     // if the first element is greater than the next 
            if (arrC[i] > arrC[j]) {
     // the last part is swap the elements
+                // Mariana PR..
                [arrC[i],arrC[j]]=[arrC[j],arrC[i]];
            }
        }
