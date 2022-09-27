@@ -15,6 +15,20 @@
 /** DO NOT CHANGE THE FUNCTION NAME **/
 const merged = (arrA, arrB) => {
     /* Only make changes below this comment */
+
+    
+    let nArrAB = arrA.concat(arrB);    
+    for(let i=0; i<nArrAB.length;i++){
+        for(let j = 0; j<i; j++)
+        if(nArrAB[i]<nArrAB[j]){
+            var temp = nArrAB[i];
+            nArrAB[i] = nArrAB[j];
+            nArrAB[j] = temp;
+        }
+    }
+
+    
+    return nArrAB;
     
     /* Only make changes below this comment */
 }
