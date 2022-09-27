@@ -14,9 +14,33 @@
 /** DO NOT CHANGE THE FUNCTION NAME **/
 const merged = (arrA, arrB) => {
   /* Only make changes below this comment */
-  //Update repo to GH
+  for (let i = 0; i < arrA.length; i++) {
+    for (let j = 0; j < arrB.length; j++) {
+      const mergedArr = new Array();
+      while (i < arrA.length && j < arrB.length) {
+        if (arrA[i] < arrB[j]) {
+          mergedArr.push(arrA[i]);
+          i++;
+        } else {
+          mergedArr.push(arrB[j]);
+          j++;
+        }
+      }
+      while (i < arrA.length) {
+        mergedArr.push(arrA[i]);
+        i++;
+      }
+      while (j < arrB.length) {
+        mergedArr.push(arrB[j]);
+        j++;
+      }
+      return mergedArr;
+    }
+  }
   /* Only make changes below this comment */
 };
 
+console.log(merged([1, 2, 4], [1, 3, 4])); //[1, 1, 2, 3, 4, 4];
+console.log(merged([2, 3, 4], [3, 5, 7])); //[2, 3, 3, 4, 5, 7];
 /** DO NOT CHANGE THE LINE BELOW **/
 module.exports.merged = merged;
