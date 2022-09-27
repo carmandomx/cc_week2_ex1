@@ -15,7 +15,22 @@
 /** DO NOT CHANGE THE FUNCTION NAME **/
 const merged = (arrA, arrB) => {
     /* Only make changes below this comment */
-    
+    let array = [...arrA,...arrB];
+    let sort = [];
+    let counter=0;
+    do{
+    counter=0;
+    for(let i=0; i<array.length; i++){
+        if(array[i]>array[i+1]){
+            swap=array[i+1];
+            array[i+1]=array[i];
+            array[i]=swap;
+            counter++;
+        }
+    }
+    }while(counter>0);
+
+    return array;
     /* Only make changes below this comment */
 }
 
