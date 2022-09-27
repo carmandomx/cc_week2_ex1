@@ -14,6 +14,14 @@
 /** DO NOT CHANGE THE FUNCTION NAME **/
 const merged = (arrA, arrB) => {
   /* Only make changes below this comment */
+
+  if (!arrA && !arrB) {
+    return "Please create a array with numbers";
+  }
+  if (!Array.isArray(arrA) || !Array.isArray(arrB)) {
+    return "Please create a array";
+  }
+
   for (let i = 0; i < arrA.length; i++) {
     for (let j = 0; j < arrB.length; j++) {
       const mergedArr = new Array();
@@ -37,10 +45,14 @@ const merged = (arrA, arrB) => {
       return mergedArr;
     }
   }
+
+  if (arrA.length === 0 && arrB.length >= 0) {
+    return arrB;
+  } else {
+    return arrA;
+  }
   /* Only make changes below this comment */
 };
 
-console.log(merged([1, 2, 4], [1, 3, 4])); //[1, 1, 2, 3, 4, 4];
-console.log(merged([2, 3, 4], [3, 5, 7])); //[2, 3, 3, 4, 5, 7];
 /** DO NOT CHANGE THE LINE BELOW **/
 module.exports.merged = merged;
