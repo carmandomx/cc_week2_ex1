@@ -15,19 +15,21 @@
 /** DO NOT CHANGE THE FUNCTION NAME **/
 const merged = (arrA, arrB) => {
     /* Only make changes below this comment */
+
+    // this for loop is to take the numbers from the second array and merged into arrA
     for (let i = 0; i < arrB.length; i++) {
 
         arrA.push(arrB[i])
-        
+
     }
     /* Only make changes below this comment */
-
+    
     for ( let i = 0; i < arrA.length; i++){
 
         for ( let j = i -1; j > - 1; j--){
-
+            //This if is to comapare the numbers using an ascending order
             if (arrA[j + 1] < arrA[j]){
-
+                // This is the swapper
                 [arrA[j + 1], arrA[j]] = [arrA[j], arrA[j + 1]]
 
             }
