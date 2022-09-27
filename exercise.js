@@ -15,7 +15,31 @@
 /** DO NOT CHANGE THE FUNCTION NAME **/
 const merged = (arrA, arrB) => {
     /* Only make changes below this comment */
-    
+
+
+    //We create a unify array to test the elements later
+    let arrC = arrA.concat(arrB);
+
+    //Nested loop to compare each elemet
+    for (let i = 0; i < arrC.length; i++) {
+        for (let j = 0; j < arrC.length; j++) {
+            //bubble sort
+            //This 'if' is to check if the iteration happening is greater than the next one, and if the condition is true then swap them
+            //we go checking each element to compare them and swap
+            if (arrC[j] > arrC[j + 1]) {
+                let arr3 = arrC[j]
+                arrC[j] = arrC[j + 1]
+                arrC[j + 1] = arr3
+            }
+        }
+    }
+
+    return arrC;
+
+
+
+
+
     /* Only make changes below this comment */
 }
 
