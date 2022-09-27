@@ -15,7 +15,22 @@
 /** DO NOT CHANGE THE FUNCTION NAME **/
 const merged = (arrA, arrB) => {
     /* Only make changes below this comment */
+    function sort(arr){
+        const lenght = arr.length;
+        const count = 0;
+        for(i=0;i<lenght;i++){
+            if(arr[i]>arr[i+1]){
+              var temp = arr[i];
+              arr[i] = arr[i+1];
+            arr[i+1]= temp;
+            i=-1;
+          }
+        }
+        return arr;
     
+    }
+    const mergedArray = arrA.concat(arrB);
+    return sort(mergedArray);
     /* Only make changes below this comment */
 }
 
