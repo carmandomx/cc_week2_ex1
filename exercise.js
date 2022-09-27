@@ -15,7 +15,8 @@
 /** DO NOT CHANGE THE FUNCTION NAME **/
 const merged = (arrA, arrB) => {
     /* Only make changes below this comment */
-    //Firstly we must merge the arrays, we could merge them in one of them but let's stick to creating a new one
+    /*Firstly we must merge the arrays, we could merge them in one of them but let's stick to 
+    creating a new one to maintain the original arrays*/
     let sortedArray = [];
     
     /*The concat() function let's us make a new array that is the ordered values of the
