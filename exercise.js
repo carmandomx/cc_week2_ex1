@@ -15,9 +15,31 @@
 /** DO NOT CHANGE THE FUNCTION NAME **/
 const merged = (arrA, arrB) => {
     /* Only make changes below this comment */
-    
+    for (let i = 0; i < arrB.length; i++) {
+
+        arrA.push(arrB[i])
+        
+    }
     /* Only make changes below this comment */
+
+    for ( let i = 0; i < arrA.length; i++){
+
+        for ( let j = i -1; j > - 1; j--){
+
+            if (arrA[j + 1] < arrA[j]){
+
+                [arrA[j + 1], arrA[j]] = [arrA[j], arrA[j + 1]]
+
+            }
+
+        }
+
+    }
+
+    return arrA
 }
+
+console.log(merged([1,2,4],[1,3,4]));
 
 
 
