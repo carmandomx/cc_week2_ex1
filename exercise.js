@@ -11,16 +11,12 @@
 
 */
 
-
 /** DO NOT CHANGE THE FUNCTION NAME **/
 const merged = (arrA, arrB) => {
-    /* Only make changes below this comment */
-    
-    /* Only make changes below this comment */
-}
-
-
-
+  /* Only make changes below this comment */
+  //Update repo to GH
+  /* Only make changes below this comment */
+};
 
 /** DO NOT CHANGE THE LINE BELOW **/
 module.exports.merged = merged;
