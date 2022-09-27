@@ -17,7 +17,6 @@ const merged = (arrA, arrB) => {
     /* Only make changes below this comment */
     function sort(arr){
         const lenght = arr.length;
-        const count = 0;
         for(i=0;i<lenght;i++){
             if(arr[i]>arr[i+1]){
               var temp = arr[i];
@@ -27,7 +26,6 @@ const merged = (arrA, arrB) => {
           }
         }
         return arr;
-    
     }
     const mergedArray = arrA.concat(arrB);
     return sort(mergedArray);
