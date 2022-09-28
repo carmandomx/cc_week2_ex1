@@ -20,26 +20,35 @@ const merged = (arrA, arrB) => {
     let newArr = []; // Result array
     //let temporary;
 
-    for (let i = 0; i <= loopLength; i++) { // Loop to get through over the array
+    for (let i = 0; i <= loopLength; i++) { // Loop to get through over the arrays
 
-        if (arrA.length && arrB.length) { // Any lenght
+        /* Logical "&&" evaluates operands from left to right, returning immediately with the value of the first falsy operand it encounters.
+        If all values are truthy, the value of the last operand is returned.*/
+        // If element exist in bot arrays     
+        if (arrA.length && arrB.length) {
 
-            if (arrA[0] <= arrB[0]) { // Compares positions
-                newArr = [...newArr,  newArr[i] = arrA.shift()]; // Do the shift positions
+            // The ".shift()" method removes the first item of an array.
+            // Takes out the lowest number between arrA and arrB
+            // Adds the lowest number in the "newArr" variable
+            if (arrA[0] <= arrB[0]) { // Takes arrA number
+                newArr.push(arrA.shift());
             }
 
-            else {
-                newArr = [...newArr, newArr[i] = arrB.shift()];
+            else { // Takes arrB number
+                newArr.push(arrB.shift());
             }
         }
-        
+
+        // If numbers exist in A
         else if (arrA.length) {
-            newArr = [...newArr, newArr[i] = arrA.shift()];
+            newArr.push(arrA.shift()); // Takes out the number from the array and adds it in the newArr variable
+        }
+        // If numbers exist in B
+        else if (arrB.length) {
+            newArr.push(arrB.shift()); // Takes out the number from the array and adds it in the newArr variable
         }
 
-        else if (arrB.length) {
-            newArr = [...newArr, newArr[i] = arrB.shift()];
-        }
+        console.log("end of loop" +newArr);
     }
     return newArr;
 
