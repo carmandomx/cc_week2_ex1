@@ -48,7 +48,7 @@ const merged = (arrA, arrB) => {
             newArr.push(arrB.shift()); // Takes out the number from the array and adds it in the newArr variable
         }
 
-        console.log("end of loop" +newArr);
+        //console.log("end of loop" +newArr);
     }
     return newArr;
 
