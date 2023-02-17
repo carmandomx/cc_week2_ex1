@@ -27,6 +27,7 @@ const merged = (arrA, arrB) => {
             var temp = nArrAB[i];
             nArrAB[i] = nArrAB[j];
             nArrAB[j] = temp;
+            //esto es un comentario
         }
     }
 
