@@ -15,8 +15,25 @@
 /** DO NOT CHANGE THE FUNCTION NAME **/
 const merged = (arrA, arrB) => {
     /* Only make changes below this comment */
+
+    // create 1 array mixing the 2 original arrays
+    let arrC = arrA.concat(arrB);
+    let i, j, aux;
+    
+    // Bubble sort to order array
+    for(i=0; i < arrC.length-1; i++) {
+        for(j=0; j < arrC.length-1; j++) {
+            if(arrC[j] > arrC[j+1]) {
+                aux = arrC[j];
+                arrC[j] = arrC[j+1];
+                arrC[j+1] = aux;
+            }
+        }
+    }
     
     /* Only make changes below this comment */
+    // Return new array
+    return arrC; 
 }
 
 
