@@ -19,11 +19,7 @@ const merged = (arrA, arrB) => {
     let count = 0;
     let concatArrs = arrA.concat(arrB);
     while (newArr.length < concatArrs.length) {
-        for (let index = 0; index < concatArrs.length; index++) {
-            if (count === concatArrs[index]) {
-                newArr.push(concatArrs[index]);
-            }
-        }
+        concarArrs.forEach((element) => { count === element ? newArr.push(element) : null});
         count++
     }
     return newArr
