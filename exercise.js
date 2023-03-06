@@ -15,12 +15,23 @@
 /** DO NOT CHANGE THE FUNCTION NAME **/
 const merged = (arrA, arrB) => {
     /* Only make changes below this comment */
-    
+    let arrC = arrA.concat(arrB); //Concat two arrays into one
+    for (let i = 0; i < arrC.length; i++){//loop every number in the new array
+        for (let j = i + 1; j < arrC.length; j++) {//loop every number one position away
+            if (arrC[i] > arrC[j]){//check if the first number is greater than the second one
+                let greatest = arrC[i]//we need to assign which one is the greatest number
+                arrC[i] = arrC[j]//put the lower number at first
+                arrC[j] = greatest//put the greatest number at last
+                }
+            }
+        }
+return arrC
     /* Only make changes below this comment */
 }
 
-
-
+arrA = [1, 2, 3 ,4 ,5, 6]
+arrB = [3, 5, 7, 9]
+console.log(merged(arrA, arrB))
 
 /** DO NOT CHANGE THE LINE BELOW **/
 module.exports.merged = merged;
