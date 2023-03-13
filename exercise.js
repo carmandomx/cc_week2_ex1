@@ -18,7 +18,12 @@ const merged = (arrA, arrB) => {
     let newArr = [];
     let count = 0;
     let concatArrs = arrA.concat(arrB);
+
+    // start a loop that will finish when the newArr gets the same length of concated arrays arrA and arrB
     while (newArr.length < concatArrs.length) {
+        // We start a count of 0 and it increments every loop
+        // if count equals an element of concarArrs (concated arrays) it push to newArr
+        // if not, the count plus 1 and continue with the loop
         concarArrs.forEach((element) => { count === element ? newArr.push(element) : null});
         count++
     }
