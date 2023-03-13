@@ -14,30 +14,30 @@
 /** DO NOT CHANGE THE FUNCTION NAME **/
 const merged = (arrA, arrB) => {
   /* Only make changes below this comment */
-  const mergedArray = []; //Creo un array donde se guardaran los valores ordenados
-  let i = 0; //Creo variables para iteración
+  const mergedArray = []; //Creation of an array where the ordered array will be pushed
+  let i = 0; //Creation of variables for the iterations
   let j = 0;
   
-  //Ciclo for que recorre los arrays hasta que llega al final de uno 
+  //For loop that will go through the arrays ultil it reaches the end of one. 
   for (; i < arrA.length && j < arrB.length; ) { 
-    if (arrA[i] < arrB[j]) { //Si el valor de i es menor al de j, guarda el valor de i y avanza una posición en el array (i++)
+    if (arrA[i] < arrB[j]) { //If the value of i is less than that of j, save the value of i and advance one position in the array (i++).
       mergedArray.push(arrA[i]);
       i++;
     } else {
-      mergedArray.push(arrB[j]); //En cambio si el valor de j es menor al de i, guarda el valor de j y avanza una posición en el array(j++)
+      mergedArray.push(arrB[j]); //On the other hand, if the value of j is less than that of i, it saves the value of j and advances one position in the array(j++)
       j++;
     }
   }
-  //Si se llega a esta parte es por que uno de los dos arrays era más grande que el otro. 
-  for (; i < arrA.length; i++) {  //Este ciclo es en caso de que el arrayA sea más grande que el arrayB
-    mergedArray.push(arrA[i]); //Empuja a nuestro array final los valores restantes
+  //If this part is reached, it is because one of the two arrays was larger than the other.
+  for (; i < arrA.length; i++) {  //This loop is in case arrayA is bigger than arrayB
+    mergedArray.push(arrA[i]); //Pushes the remaining values to our ordered array.
   }
 
-  for (; j < arrB.length; j++) { //Este ciclo es igual que el anteior, solo que es en caso de que el arrayB sea más grande que el arrayA
-    mergedArray.push(arrB[j]);
+  for (; j < arrB.length; j++) { //This loop is the same as the previous one, except that it is in case that arrayB is bigger than arrayA
+    mergedArray.push(arrB[j]); //Pushes the remaining values to our ordered array.
   }
 
-  return mergedArray; //Al final de los ciclos se retorna el array ordenado
+  return mergedArray; //At the end of the cycles, the sorted array is returned
   /* Only make changes below this comment */
 };
 
